@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard- Bot Stats</title>
+
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <meta name="theme-color" content="#7952b3" />
+  </head>
+  <body>
+    <header
+      class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"
+    >
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Better</a>
+      <button
+        class="navbar-toggler position-absolute d-md-none collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu"
+        aria-controls="sidebarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <input
+        class="form-control form-control-dark w-100"
+        type="text"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+          <a class="nav-link px-3" href="./login.html">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+        >
+          <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="./Dashboard.html">
+                  <span data-feather="bar-chart-2"></span>
+                  Bot Stats
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Dashboard-Accounts.html">
+                  <span data-feather="user-plus"></span>
+                  Add account
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./Dashboard-Service.html">
+                  <span data-feather="globe"></span>
+                  Request Service
+                </a>
+              </li>
+            </ul>
+
+            <h6
+              class="
+                sidebar-heading
+                d-flex
+                justify-content-between
+                align-items-center
+                px-3
+                mt-4
+                mb-1
+                text-muted
+              "
+            >
+              <span>Saved Bots</span>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  bot #123
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  bot #103
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  bot #174
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div
+            class="
+              d-flex
+              justify-content-between
+              flex-wrap flex-md-nowrap
+              align-items-center
+              pt-3
+              pb-2
+              mb-3
+              border-bottom
+            "
+          >
+            <h1 class="h2">Dashboard</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group me-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Share
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Export
+                </button>
+              </div>             
+            </div>
+          </div>
+          <!-- Seaction Header -->
+          <h3 class="py-3 fw-light">Request Service</h3>
+          <!-- section content   -->
+          <form class="col-lg-6 col-md-8 col-sm-12" action="">
+            <div class="row">
+              <div class="mb-3 col">
+                <label for="bot-id" class="form-label">Bot Id</label>
+                <select id="bot-id" class="form-select">
+                  <option selected>Bot 235</option>
+                  <option value="">Bot 132</option>
+                  <option value="">Bot 421</option>
+                  <option value="">Bot 002</option>
+                </select>
+              </div>
+              <div class="mb-3 col">
+                <label for="website" class="form-label">Website</label>
+                <select id="website" class="form-select">
+                  <option selected>Value 1</option>
+                  <option value="">Value 2</option>
+                  <option value="">Value 3</option>
+                  <option value="">Value 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col">
+                <label for="username" class="form-label">Username</label>
+                <input id="username" type="text" class="form-control" />
+              </div>
+              <div class="mb-3 col">
+                <label for="password" class="form-label">Password</label>
+                <input id="password" type="password" class="form-control" />
+                <div class="form-check mt-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    onclick="show_password()"
+                    id="view-password-check"
+                  />
+                  <label class="form-check-label" for="view-password-check">
+                    show password
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col">
+                <label for="winner" class="form-label">Winner</label>
+                <select id="winner" class="form-select">
+                  <option selected>Value 1</option>
+                  <option value="">Value 2</option>
+                  <option value="">Value 3</option>
+                  <option value="">Value 4</option>
+                </select>
+              </div>
+              <div class="mb-3 col">
+                <label for="bot-user" class="form-label">Bot User</label>
+                <input id="bot-user" type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col">
+                <label for="bot-amount" class="form-label">Bot Amount</label>
+                <input id="bot-amount" type="text" class="form-control" />
+              </div>
+              <div class="mb-3 col">
+                <label for="time-frame" class="form-label">Time Frame</label>
+                <input id="time-frame" type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col">
+                <label for="bot-description" class="form-label"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="bot-description"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col">          
+                <label for="web-link" class="form-label">Web Link</label>
+                <div class="alert alert-success mb-3" role="alert">
+                  <span data-feather="link" class="me-2"></span>
+                  <a
+                    target="_blank"
+                    href="https://www.hotbot.com/blog/how-to-spot-a-fake-url/"
+                    class="alert-link fw-light"
+                    >https://www.hotbot.com/blog/how-to-spot-a-fake-url/</a
+                  >
+                </div>
+                <input
+                  id="web-link"
+                  type="text"
+                  class="form-control"
+                  placeholder="add new link"
+                />
+              </div>
+            </div>
+            <!-- action buttons -->
+            <button class="btn btn-primary me-2 mb-3">Save</button>
+            <button class="btn btn-outline-dark me-2 mb-3">
+              Save and add another
+            </button>
+            <button class="btn btn-outline-dark me-2 mb-3">
+              save and continue editing
+            </button>
+            <button class="btn btn-outline-danger me-2 mb-3">Delete</button>
+          </form>
+        </main>
+      </div>
+    </div>
+
+    <!-- scripts   -->
+    <script src="./js/main.js" Z></script>
+    <script>
+      feather.replace();
+    </script>
+    <script>
+      function show_password() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {  
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>
